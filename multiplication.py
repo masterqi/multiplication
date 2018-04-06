@@ -91,7 +91,18 @@ class multiplication(object):
                 except:
                     c = 0
                 a = a + c
-            b = b + str(a % 10)
+            b = b + str(a % 10) 
             a = a / 10
+        if a == 0:
+            pass
+        else:
+            e = str(a)
+            e = e[::-1]
+            b = b + e
         d = b[::-1]
+        for i in range(len(d)):
+            if d[0] == '0':
+                d = d[1:]
+            else:
+                break
         return d
